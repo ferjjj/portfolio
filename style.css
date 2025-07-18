@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --color-primary: #FFBE98;
+    --color-white: #f5f5f5;
+    --color-black: #080808;
+    --color-grey: #494949;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+    scroll-behavior:smooth;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 5rem;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+h4{
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+small{
+    font-size: 0.76rem;
+}
+
+p{
+    color: var(--color-black);
+    font-size: 1.5rem;
+}
+
+b{
+    color: var(--color-black);
+}
+
+.text-muted{
+    color: var(--color-grey);
+}
+
+.section-header {
+    font-size: 8rem;
+    line-height: 8rem;
+}
+
+.nav-link {
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 10px var(--color-black);
+    color: var(--color-primary) !important;
+    font-size: 2.3rem !important;
+}
+
+.active:hover {
+    text-shadow: 0 0 10px var(--color-black);
+    color: var(--color-primary) !important;
+    font-size: 3rem !important;
+}
+
+.nav-container {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    padding-left: 2vw;
+    padding-bottom: 2vw;
+}
+
+.nav-container .nav-link {
+    font-family: "Poppins";
+    font-weight: 700;
+    color: #ffffffe5;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    text-shadow: 0 0 12px var(--color-black);
+    cursor:pointer;
+}
+
+.nav-container .active{
+    color: var(--color-primary);
+    font-size: 3rem;
+    line-height: 3.3rem;
+}
+
+.header-section {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--color-white);
+}
+
+.character-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: 2;
+}
+
+.character-container #character-img {
+    height: 100vh;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.character-container #character-img-2 {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain;
+}
+
+.header-big-text {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    align-content: center;
+    overflow: hidden;
+}
+
+.header-big-text #big-text {
+    width: 100vw;
+    height: 100vh;
+    font-size:65vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Bebas Neue';
+    color: var(--color-primary);
+    text-align: center;
+    line-height: 58vw;
+    font-weight: 400;
+}
+
+.icon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 2vw;
+    padding-left: 2vw;
+    max-width: 100vw;
+    width: max-content;
+    align-content: center;
+    vertical-align: center;
+    z-index: 3;
+}
+
+.icon-container .icon{
+    height: 6rem;
+    width: 6rem;
+    background-color: var(--color-black);
+    float:left;
+    cursor: pointer;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    display: flex;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    transition: 0.5s;
+}
+
+.icon-container .icon:hover {
+    background-color: #1d1d1d;
+}
+.icon-container .icon img{
+    height: auto;
+    width: 3rem;
+}
+
+.icon-container #icon-text{
+    float: right;
+    font-family: 'Bebas Neue';
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    color: var(--color-black);
+    margin-left: 0.5rem;
+}
+
+.title-container {
+    position: absolute;
+    right: 0;
+    bottom: calc((50vh - 12rem));
+    z-index: 3;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.social-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 102%;
+  }
+  
+  .social-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+  
+  .social-tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .social-tooltip #cover-letter {
+    margin-right: 2rem;
+  }
+
+.title-container .title-box {
+    background-color: var(--color-black);
+    padding-left: 4vw;
+    padding-right: 4vw;
+    width: fit-content;
+    padding-top:1.5vw;
+    padding-bottom: calc(1rem + 1.5vw);
+}
+
+.title-container .title-box #title {
+    color: var(--color-white);
+    font-size: 6rem;
+    font-family: "Poppins";
+    font-weight: 800;
+    line-height: 5.5rem;
+    text-align: end;
+}
+
+.title-container .socials-section {
+    margin-top:2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title-container .social-container {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 3rem 3rem 3rem 3rem;
+    background-color: var(--color-black);
+    float: right;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.title-container .social-container img{
+    height: 2.5rem;
+    width: auto;
+}
+
+.title-container .social-container:hover {
+    background-color: var(--color-primary);
+}
+
+.education-section {
+    background-color: var(--color-black);
+    padding: 4rem;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.education-section h4{
+    color: var(--color-white);
+}
+
+.education-section .education-header{
+    text-align: right;
+}
+
+.education-section .section-header{
+    color: var(--color-white);
+}
+
+.education-section .education-container{
+    width: fit-content;
+    position: relative;
+    display: flex;
+    margin: 4rem;
+    width: 100vw;
+    transition: 0.5s;
+}
+
+.education-section .education-container:hover{
+    translate: 60px;
+    scale: 1.05;
+    background: linear-gradient(35deg, rgba(255, 255, 255, 0.233) 0%, rgba(255, 255, 255, 0) 24%);
+}
+
+.education-section .education-container .education-detail{
+    height: inherit;
+    width: fit-content;
+    padding: 1rem;
+}
+
+.education-section .education-container .education-line{
+    width: 0.5rem;
+    height: inherit;
+    background-color: var(--color-primary);
+}
+
+.education-section .education-abbr{
+    color: black;
+    font-family: "Bebas Neue";
+    font-size: 15rem;
+    line-height: 13rem; 
+}
+
+.education-section .education-container svg{
+    margin-left: 1rem;
+    font-family: "Bebas Neue";
+    font-size: 13rem;
+    line-height: 13rem;
+    display: block;
+    width: 18rem;
+}
+
+.education-section .education-container text{
+    color: black;
+    fill:none;
+    stroke:var(--color-white);
+    stroke-width:2px;
+    stroke-linejoin: round;
+    transition: 0.5s;
+}
+
+.education-section .education-container:hover text{
+    stroke: var(--color-primary);
+}
+
+.education-section .education-fullname{
+    color: var(--color-white);
+    font-size: 4rem;
+    line-height: 4rem;
+    font-family: "Bebas Neue";
+    font-weight: 100;
+}
+
+.education-section .education-container:hover .education-fullname{
+   color: var(--color-primary);
+}
+
+.education-section .education-date{
+    color: var(--color-grey);
+    font-size: 2rem;
+    line-height: 2rem;
+    font-family: "Bebas Neue";
+    font-weight: 100;
+}
+
+.skills-section {
+    width: 100vw;
+    padding: 3rem;
+    position: relative;
+    background-color: var(--color-primary);
+}
+
+.skills-section .skills-header{
+    text-align: center;
+}
+
+.skills-checklist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill {
+    width: calc(50% - 10px);
+    margin-bottom: 30px;
+    background-color: var(--color-black); /* Match the background color with your site */
+    padding: 2rem;
+    border-radius: var(--border-radius-2);/* Match the border-radius with your site */
+    transition: 0.5s;
+}
+
+.skill:hover {
+    scale: 1.02;
+    background-color: #1d1d1d; /* Match the background color with your site */
+    
+}
+
+.skill-name {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--color-primary); /* Match the text color with your site */
+}
+
+.skill-bar {
+    background-color: var(--color-white); /* Match the background color with your site */
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+.skill:hover .skill-bar{
+    background-color: var(--color-primary);
+}
+
+.skill-percentage {
+    font-size: 1rem;
+    color: var(--color-white); /* Match the text color with your site */
+    padding-top: 1rem;
+}
+
+.portfolio-section{
+    padding: 4rem;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.portfolio-section .portfolio-header{
+    margin-bottom: 3rem;
+    text-align: right;
+}
+
+.portfolio-header{
+    padding-bottom:2rem;
+}
+
+.portfolio-section .portfolio-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.portfolio-section .portfolio-container {
+    max-width: 700px;
+    padding-bottom: 2rem;
+}
+
+.portfolio-section .portfolio-container img{
+    border-radius: 2rem;
+    box-shadow: 2px 2px 15px #0000002f;
+    filter: blur(1.5px) saturate(25%);
+    transition: 0.5s;
+}
+
+.portfolio-section .portfolio-container img:hover{
+    border-radius: 2rem;
+    box-shadow: 2px 2px 20px  #ffbe98cc;
+    filter: blur(0px) saturate(1) ;scale: 1.1;
+}
+.portfolio-section .left-pane {
+    float: left;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.portfolio-section .right-pane {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-section {
+    width: 100vw;
+    padding-top: 3rem;
+    padding-bottom: 8rem;
+    position: relative;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin: 20vh;
+    background-color: var(--color-primary);
+    z-index:3;
+}
+
+.contact-section h4 {
+    text-align: center;
+}
+
+.contact-section .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.contact-section .contact-container .contact-map-container{
+    max-width: 700px;
+    overflow: hidden;
+    border: 2px solid var(--color-black);
+    margin: 1rem;
+    margin-top: 3rem;
+}
+
+.contact-section .contact-container .contact-form-container{
+    max-width: 700px;
+    height: 30rem;
+    display: grid;
+    margin: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    grid-template-rows: max-content max-content max-content max-content auto max-content;
+}
+
+.contact-section .contact-container .contact-form-container .name-input-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1rem;
+}
+
+.contact-section .contact-container .contact-form-container  input[type="text"] {
+    margin-right: 1rem;
+}
+
+.contact-section .contact-container  .contact-form-container  button {
+    width: 100%;
+    margin-left: 0;
+    background-color: black;
+}
+
+.contact-section .contact-container .contact-form-container textarea {
+    min-height: 8rem;
+}
+
+.contact-section .contact-container .contact-form-container label {
+    color: var(--color-black);
+}
+
+.contact-section .contact-container .contact-map-container iframe {
+    box-shadow: 2vh 2vh 0 var(--color-neon-purple);
+}
+
+footer {
+    height: 10rem;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-section .character-container {
+    width: 100vw;
+    height: inherit;
+    position: absolute;
+    bottom: 0;
+    right:0;
+    z-index: 10;pointer-events: none;
+}
+
+.contact-section .character-container img{
+    height: 80vh;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 1.5rem;
+    color: var(--color-black);
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    margin-top: 1rem;
+    border: 2px solid var(--color-black);
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    color: var(--color-dark);
+    width: 100%;
+    padding-left: 1.5rem;
+    border: 2px solid var(--color-black);
+}
+
+button{
+    width: 40%;
+    color: var(--color-white);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    background-color: var(--color-black);
+    padding: 1rem;
+    min-height: fit-content;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 2rem;
+    font-family: "Poppins";
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: var(--color-primary);
+}
+
+footer p{
+    color: var(--color-white);
+    
+}
+
+footer .icon-container{
+    height: 3rem;
+    width: 3rem; float:left;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    display: flex;
+    padding: 1rem;
+}
+
+footer img {
+    float: left;
+    height: 3rem;
+    width: auto;
+}
+
+label {
+    font-size: 1.4rem;
+    margin: 0.5rem;
+    margin-top: 1rem;
+}
+
+select {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    color: var(--color-dark);
+    border-radius: var(--border-radius-2);
+    width: 100%;
+    padding-left: 1.5rem;
+}

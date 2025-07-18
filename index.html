@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Ferj | Portfolio</title>
+    <!-- <link rel="icon" href="/assets/icons/g.png"> -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <a class="nav-link active" onclick="highlightAndScrollToLink('home');" id="nav-home">home</a><br>
+            <a class="nav-link" onclick="highlightAndScrollToLink('education');" id="nav-education">education</a><br>
+            <a class="nav-link" onclick="highlightAndScrollToLink('skills');" id="nav-skills">skills</a><br>
+            <a class="nav-link" onclick="highlightAndScrollToLink('portfolio');" id="nav-portfolio">portfolio</a><br>
+            <a class="nav-link" onclick="highlightAndScrollToLink('contact');" id="nav-contact">contact</a><br>
+        </div>
+
+        <section class="nav_section" id="home">
+            <div class="header-section" id="header-section">
+                <div class="header-big-text">
+                    <p id="big-text">
+                        FERJ<br>FERJ<br>FERJ<br>FERJ<br>FERJ<br>FERJ<br>FERJ<br>FERJ<br>FERJ<br>FERJ<br>FERJ<br></p>
+                </div>
+                <div class="character-container">
+                    <img src="assets\images\character_1.png" id="character-img">
+                </div>
+                <div class="icon-container">
+                    <div class="icon">
+                        <img src="assets\images\Icon-Two-Tone-Peach-White.svg" id="logo-img">
+                    </div>
+                    <h4 id="icon-text">Ferjin-Anne<br>Uy</h4>
+                </div>
+                <div class="title-container">
+                    <div class="title-box">
+                        <h2 id="title">web<br>developer</h2>
+                    </div>
+                    <div class="socials-section">
+                        <div class="social-tooltip">
+                            <div class="social-container" id="first_social">
+                                <a href="https://www.linkedin.com/in/ferjin-anne-u-551ab721a/">
+                                    <img src="assets\images\in-icon.png">
+                                </a>
+                            </div>
+                            <span class="tooltiptext">LinkedIn</span>
+                        </div>
+
+                        <div class="social-tooltip">
+                            <div class="social-container" id="second_social">
+                                <a href="https://www.facebook.com/ferjjjjj">
+                                    <img src="assets\images\fb-icon.png">
+                                </a>
+                            </div>
+                            <span class="tooltiptext">Facebook</span>
+                        </div>
+
+                        <div class="social-tooltip">
+                            <div class="social-container" id="third_social">
+                                <a href="https://www.instagram.com/akosiuy/">
+                                    <img src="assets\images\ig-icon.png">
+                                </a>
+                            </div>
+                            <span class="tooltiptext">Instagram</span>
+                        </div>
+
+                        <div class="social-tooltip">
+                            <div class="social-container" id="resume">
+                                <div class="social-container" id="third_social">
+                                 <a href="assets\Resume.pdf">
+                                    <img src="assets\images\cv.png">
+                                </div>
+                            </div>
+                            <span class="tooltiptext">Resume</span>
+                        </div>
+
+                        <div class="social-tooltip">
+                            <div class="social-container" id="cover-letter">
+                                <div class="social-container" id="third_social">
+                                <a href="assets\Cover Letter.pdf">
+                                    <img src="assets\images\cover-letter.png">
+                                </div>
+                            </div>
+                            <span class="tooltiptext">Cover Letter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner_section" id="banner">
+            <div class="banner-container">
+                <a href="#contact">
+                    <img src="assets\banner.gif" id="banner-img" alt="Banner Image">
+                </a>
+            </div>
+        </section>        
+        
+        <section class="nav_section" id="education">
+            <div class="education-section" id="education-section">
+                <div class="education-header">
+                    <h1 class="section-header">education</h1>
+                    <h4>My academic journey.</h4>
+                </div>
+                <div class="education-container" id="first-container-ed">
+                    <div class="education-line"></div>
+                    <svg>
+                        <text y="150">PHS</text>
+                    </svg>
+                    <div class="education-detail">
+                        <h2 class="education-fullname">Pampanga<br>High School</h2>
+                        <h3 class="education-date">2015-2019</h3>
+                    </div>
+                </div>
+                <div class="education-container" id="second-container-ed" text-align: right;>
+                    <div class="education-line"></div>
+                    <svg>
+                        <text y="180">GIST</text>
+                    </svg>
+                    <div class="education-detail">
+                        <h2 class="education-fullname">Gateways Institute<br>of Science and<br>Technology</h2>
+                        <h3 class="education-date">2019-2021</h3>
+                    </div>
+                </div>
+                <div class="education-container" id="third-container-ed">
+                    <div class="education-line"></div>
+                    <svg>
+                        <text y="150">HAU</text>
+                    </svg>
+                    <div class="education-detail">
+                        <h2 class="education-fullname">Holy Angel<br>University</h2>
+                        <h3 class="education-date">2021-Present</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nav_section" id="skills">
+            <div class="skills-section" id="skills-section">
+                <div class="skills-container">
+                    <div class="skills-header">
+                        <h1 class="section-header" style="color: black;">skills</h1>
+                        <h4 style="color: black;">Here's what I can do.</h4>
+                    </div>
+                    <br><br>
+                    <div class="skills-checklist">
+                        <div class="skill">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar" style="width: 70%;"></div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar" style="width: 60%;"></div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">HTML</span>
+                            <div class="skill-bar" style="width: 80%;"></div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">CSS</span>
+                            <div class="skill-bar" style="width: 70%;"></div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">JS</span>
+                            <div class="skill-bar" style="width: 60%;"></div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Dart</span>
+                            <div class="skill-bar" style="width: 60%;"></div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar" style="width: 80%;"></div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Flutter</span>
+                            <div class="skill-bar" style="width: 80%;"></div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nav_section" id="portfolio">
+            <div class="portfolio-section" id="portfolio-section">
+
+                <div class="portfolio-header">
+                    <h1 class="section-header" style="color: black;">portfolio</h1>
+                    <h4 style="color: black;">Click to view a project.</h4>
+                </div>
+                <div class="portfolio-box">
+                    <div class="left-pane">
+                        <a href="https://grapika.bitbucket.io/" style="text-decoration: none; color: inherit;">
+                            <div class="portfolio-container" id="first-container-port">
+                                <img src="assets\images\grpka.png" id="first-container-img"
+                                    data-definition="Mangan Tamu! Mangan Tamu acts as a digital paradise for fans of Kapampangan food, whether they are experts on Filipino delicacies or travelers seeking a gourmet experience. This website delivers a virtual feast that leaves viewers hankering for more, with an appealing menu that includes Kapampangan classics like Pindang and Morcon Kapampangan along with new inventions that pay tribute to heritage.">
+                            </div>
+                        </a>
+                        <a href="https://aniyomu.wordpress.com/" style="text-decoration: none; color: inherit;">
+                            <div class="portfolio-container" id="second-container-port">
+                                <img src="assets\images\aniyomu.png" id="second-container-img"
+                                    data-definition="Definition text for second image">
+                            </div>
+                        </a>
+                        <a href="https://coffeebrewista.com/" style="text-decoration: none; color: inherit;">
+                            <div class="portfolio-container" id="third-container-port">
+                                <img src="assets\images\brewista.png" id="third-container-img"
+                                    data-definition="Definition text for third image">
+                            </div>
+                        </a>
+                        <a href="Mangan/index.html" style="text-decoration: none; color: inherit;">
+                            <div class="portfolio-container" id="fourth-container-port">
+                                <img src="assets\images\mangan.png" id="fourth-container-img"
+                                    data-definition="Definition text for fourth image">
+                            </div>
+                        </a>
+                        <a href="foody-html/index.html" style="text-decoration: none; color: inherit;">
+                            <div class="portfolio-container" id="fifth-container-port">
+                                <img src="assets\images\foody.png" id="fifth-container-img"
+                                    data-definition="Definition text for second image">
+                            </div>
+                        </a>
+                        <a href="MIUN/index.html" style="text-decoration: none; color: inherit;">
+                            <div class="portfolio-container" id="sixth-container-port">
+                                <img src="assets\images\prtflio.png" id="sixth-container-img"
+                                    data-definition="Definition text for fourth image">
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="nav_section" id="contact">
+            <div class="contact-section" id="contact-section">
+                <h1 class="section-header">contact</h1>
+                <h4>Send me a message. I know you are interested.</h4>
+                <div class=" contact-container">
+                    <div class="contact-form-container">
+                        <div class="name-input-container">
+                            <label for="contact-first-name">First name</label>
+                            <label for="contact-last-name">Last name</label>
+                            <input type="text" name="entry.453023179" id="contact-first-name" placeholder="First name">
+                            <input type="text" name="entry.1943905898" id="contact-last-name" placeholder="Last name">
+                        </div>
+                        <label for="contact-email">Email</label>
+                        <input type="text" name="entry.1549738552" id="contact-email" placeholder="Email">
+                        <label for="contact-details">Message</label>
+                        <textarea name="entry.511187647" id="contact-details" rows="10" cols="30"
+                            placeholder="Message us anything!"></textarea>
+                        <div class="submit-btn">
+                            <button id="submit-message" onclick="postMessageToGoogle()">say hello world!</button>
+                        </div>
+                    </div>
+                    <div class="contact-map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1925.733092703888!2d120.58782193884406!3d15.132721354672276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f24ef02dcf79%3A0x794a3425ad80fce4!2sSt.%20Joseph%20Hall%2C%20Angeles%2C%20Pampanga!5e0!3m2!1sen!2sph!4v1700334723381!5m2!1sen!2sph"
+                            width="600" height="450" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="character-container">
+                    <img src="assets\images\character_2.png" id="character-img-2">
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <img src="assets/images/Icon-Two-Tone-Peach-White.svg" id="logo">
+            <div class="icon-text">
+                <p style="color: #FFBE98; font-weight: 800; line-height: 2rem;">Ferjin-Anne Uy</p>
+                <p style="font-size: 1rem"> All rights reserved 2024.</p>
+            </div>
+        </footer>
+
+
+    </div>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
