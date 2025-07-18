@@ -1,0 +1,864 @@
+/*
+* ----------------------------------------------------------------------------------------
+Author        : Rama Hardian
+Template Name : Kalpax - Portfolio, CV, Resume, vCard
+Version       : 1.0
+* ----------------------------------------------------------------------------------------
+  TABLE OF CONTENT
+* ----------------------------------------------------------------------------------------
+* 01.BASE CSS
+* 02.ANIMATION KEY FRAME
+* 03.LOADDER PAGE STYLE
+ 
+* ----------------------------------------------------------------------------------------
+*
+* ----------------------------------------------------------------------------------------
+*
+* ---------------------------------------------- 
+* 01. BASE CSS
+* 
+/* ---------------------------------------------- /*
+*/
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #eeeeee;
+    font-family: 'Karla', sans-serif;
+    font-weight: 300;
+    color: #212121;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+main {
+    overflow: hidden;
+    position: relative;
+}
+
+input,
+textarea {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 8px 15px 8px 0;
+    color: #474747;
+    border: none;
+    border-bottom: 1px solid #474747;
+    height: 50px;
+    font-size: 18px;
+    background-color: transparent;
+    transition: .3s;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-bottom: 1px solid #212121;
+}
+
+select {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 8px 15px 8px 0;
+    color: #474747;
+    border: none;
+    border-bottom: 1px solid #474747;
+    height: 50px;
+    font-size: 18px;
+    background-color: transparent;
+    transition: .3s;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-weight: 800;
+    color: #212121;
+}
+
+.btn-dark {
+    padding: 20px 50px;
+    font-size: 20px;
+    background: #212121;
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-semidark {
+    padding: 20px 50px;
+    font-size: 20px;
+    background: #474747;
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-light {
+    padding: 20px 50px;
+    font-size: 20px;
+    background: #f8f9fa;
+    color: #212121;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.d-hover:hover {
+    background: #474747;
+    color: #fff;
+}
+
+.l-hover:hover {
+    background: #e3e3e3;
+    color: #212121;
+}
+
+.darkbg {
+    background: #212121;
+}
+
+.lightbg {
+    background: #fff;
+}
+
+.lightbg:hover {
+    background: #212121 !important;
+    color: #fff !important;
+}
+
+.fichead {
+    background: rgba(255, 255, 255, 1);
+    z-index: 999;
+}
+
+.goup {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    border-radius: 50%;
+    width: 50px;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    height: 50px;
+    transition: all .3s;
+    color: #fff;
+    z-index: 1;
+}
+
+.goup i {
+    position: absolute;
+    left: 30%;
+    font-size: 20px;
+    top: 15px;
+}
+
+.goup:hover {
+    color: #F8F8F8;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%), 0 3px 15px rgb(0 0 0 / 20%);
+}
+
+.goup.showme {
+    bottom: 35px;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.titlehead h3 {
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.titlehead p {
+    line-height: 1.5;
+}
+
+
+/*
+* ---------------------------------------------- 
+* 02.ANIMATION KEY FRAME
+* 
+/* ---------------------------------------------- /*
+*/
+
+@keyframes line {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@keyframes lines {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+
+    100% {
+        left: 107%;
+        right: -8%;
+    }
+}
+
+@-webkit-keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(26px)
+    }
+}
+
+@media (max-width: 999px) {
+    .titlehead h3 {
+        font-size: 30px;
+    }
+}
+
+
+/*
+* ---------------------------------------------- 
+* 03.LOADDER PAGE STYLE
+* 
+/* ---------------------------------------------- /*
+*/
+
+.wrap-load {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background: #fff;
+    display: block;
+}
+
+.progress {
+    height: 3px;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 2px;
+    position: fixed;
+    top: 150%;
+    z-index: 65;
+}
+
+.progress .line {
+    background-color: #0f141e;
+}
+
+.progress .line:before {
+    content: '';
+    position: absolute;
+    background-color: #0f141e;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    animation: line 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+
+.progress .line:after {
+    content: '';
+    position: absolute;
+    background-color: #0f141e;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    animation: lines 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation-delay: 1.15s;
+}
+
+.img-logo-load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.img-logo-load img {
+    filter: invert(1);
+    width: 50%;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
+.logowrap img {
+    width: 80%;
+    filter: invert(1);
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 999px) {
+    .logowrap img {
+        width: 20%;
+        filter: invert(1);
+    }
+}
+
+
+/* --------------------------------
+* 04.MAIN HEADER PAGE
+    - BURGER MENU WRAP
+----------------------------------*/
+
+.kalpax-burger-menu {
+    width: 35px;
+    height: 32px;
+    margin: auto;
+    cursor: pointer;
+    right: 25px;
+    position: absolute;
+    z-index: 999999;
+    top: 15px;
+}
+
+.kalpax-burger-menu:before,
+.kalpax-burger-menu span,
+.kalpax-burger-menu:after {
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: #0f141e;
+    border-radius: 2px;
+    position: absolute;
+    opacity: 1;
+}
+
+.kalpax-burger-menu:before,
+.kalpax-burger-menu:after {
+    transition: top .35s cubic-bezier(.23, 1, .32, 1), transform .35s cubic-bezier(.23, 1, .32, 1), opacity .35s cubic-bezier(.23, 1, .32, 1), background-color 1.15s cubic-bezier(.86, 0, .07, 1);
+    -webkit-transition: top .35s cubic-bezier(.23, 1, .32, 1), -webkit-transform .35s cubic-bezier(.23, 1, .32, 1), opacity .35s cubic-bezier(.23, 1, .32, 1), background-color 1.15s cubic-bezier(.86, 0, .07, 1);
+    content: "";
+}
+
+.kalpax-burger-menu:before {
+    top: 4px;
+}
+
+.kalpax-burger-menu span {
+    top: 15px;
+}
+
+.kalpax-burger-menu:after {
+    top: 26px;
+}
+
+.kalpax-burger-menu:hover:before {
+    top: 7px;
+}
+
+.kalpax-burger-menu:hover:after {
+    top: 23px;
+}
+
+.kalpax-burger-menu.cross span {
+    opacity: 0;
+}
+
+.kalpax-burger-menu.cross:before,
+.kalpax-burger-menu.cross:after {
+    top: 40%;
+}
+
+.kalpax-burger-menu.cross:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+
+.kalpax-burger-menu.cross:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+}
+
+.kalpax-burger-menu:focus {
+    outline: none;
+}
+
+
+/* --------------------------------
+* 04.MAIN HEADER PAGE
+    - NAVIGATION PAGE
+----------------------------------*/
+
+.menuContent {
+    position: fixed;
+    width: 100vw;
+    overflow: auto;
+    height: 100vh;
+    display: none;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.menuContent ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    top: 20%;
+    left: 0;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 1;
+}
+
+.menuContent ul li {
+    position: relative;
+    display: block;
+    top: 100%;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.menuContent ul li a {
+    display: inline-block;
+    color: #0f141e;
+    text-decoration: none;
+    transition: color 0.2s;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: 300;
+}
+
+.vlink:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #0f141e;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.vlink:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.submenulink i {
+    position: absolute;
+    font-size: 13px;
+    right: 0;
+    top: 23px;
+    z-index: -1;
+}
+
+.submenulink>a.dropmenu {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.submenu {
+    display: none;
+    padding: 10px 0;
+}
+
+.submenu>li {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.submenu>li a {
+    font-size: 15px !important;
+    color: var(--color-two) !important;
+}
+
+.menu.active {
+    display: none;
+}
+
+.submenulink.opensubmenu ul[class=submenu] {
+    display: block !important;
+}
+
+.hero-poto img {
+    width: 100%;
+    filter: grayscale(1);
+}
+
+.detail-hero p:first-child {
+    letter-spacing: 5px;
+}
+
+.detail-hero h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.overlapwrap {
+    position: relative;
+    top: -30px;
+}
+
+.info-overlap.darkbg {
+    padding: 50px 30px;
+    color: #fff;
+}
+
+.info-overlap.lightbg {
+    background: #fff;
+    padding: 50px 30px;
+    color: #212121;
+}
+
+.info-overlap i {
+    font-size: 40px;
+    width: 80px;
+    text-align: center;
+    padding: 20px 0;
+    height: 80px;
+    border: 1px solid #F8F8F8;
+}
+
+.info-overlap h3 {
+    font-weight: 600;
+}
+
+
+/* --------------------------------
+* 04.PROJECT
+----------------------------------*/
+
+.wrapitempoto {
+    background: #F8F8F8;
+}
+
+.wrapitemproject {
+    position: relative;
+    height: 100%;
+    filter: grayscale(1);
+}
+
+.wrapitemproject:after {
+    content: '';
+    width: 499px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: -webkit-linear-gradient(left, rgb(248 248 248), rgba(248, 248, 248, 0));
+}
+
+.detail-porto {
+    padding: 60px 30px;
+}
+
+.detail-porto h3 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.detail-porto p:nth-last-child(2) {
+    line-height: 1.5;
+}
+
+@media (max-width: 999px) {
+    .wrapitemproject {
+        height: 300px;
+    }
+
+    .wrapitemproject:after {
+        background-image: -webkit-linear-gradient(bottom, rgb(248 248 248), rgba(248, 248, 248, 0));
+    }
+
+    .detail-porto h3 {
+        font-size: 30px;
+    }
+}
+
+#testimonialsection {
+    background: #fff;
+}
+
+.review-item {
+    position: relative;
+    padding: 50px;
+    background: #F8F8F8;
+}
+
+.userpoto {
+    width: 100px;
+}
+
+.userpoto img {
+    width: 100%;
+    border-radius: 100px;
+}
+
+.review-item p:nth-last-child(1) {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.review-item p:nth-last-child(3) {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.testi-nav {
+    position: relative;
+    margin: 0 auto;
+    bottom: 0;
+    z-index: 1;
+    width: 50%;
+    height: 100px;
+}
+
+.testi-nav button {
+    width: 25%;
+    height: 20%;
+    font-size: 30px;
+    border: none;
+    background: none;
+}
+
+@media (max-width: 990px) {
+    .userpoto {
+        width: 100%;
+    }
+
+    .userpoto img {
+        width: 100px !important;
+        margin: 0 auto;
+    }
+}
+
+
+/*
+* ---------------------------------------------- 
+* 05.MAIN CONTAINER CONTENT PAGE SECTION
+    - CLIENT LOGO
+* 
+/* ---------------------------------------------- /*
+*/
+
+.clientlist {
+    margin: 0;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.imgclient {
+    padding: 0;
+    max-width: 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+}
+
+.imgclient a {
+    padding: 0 20px;
+    height: 150px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.imgclient a img {
+    max-width: 60%;
+    vertical-align: middle;
+    height: auto;
+}
+
+@media (max-width: 990px) {
+    .imgclient {
+        -webkit-box-flex: 0;
+        max-width: 33.33%;
+        -ms-flex: 0 0 33.33%;
+        flex: 0 0 33.33%;
+    }
+
+    .imgclient a img {
+        max-width: 33%;
+    }
+}
+
+@media (max-width: 480px) {
+    .imgclient {
+        -webkit-box-flex: 0;
+        max-width: 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+
+    .imgclient a img {
+        max-width: 50%;
+    }
+}
+
+
+/* --------------------------------
+* 04.FOOTER
+----------------------------------*/
+
+.footupper {
+    border-bottom: 1px solid #474747;
+}
+
+#footer-wrap {
+    background: #212121;
+}
+
+.footquote h3 {
+    color: #F8F8F8;
+    font-weight: 600;
+    font-size: 60px;
+}
+
+.sosmedlist {
+    padding: 0;
+}
+
+.sosmedlist li {
+    list-style: none;
+    margin: 0 20px;
+    display: inline-block;
+}
+
+.sosmedlist li a i {
+    width: 50px;
+    height: 50px;
+    background: #F8F8F8;
+    text-align: center;
+    padding: 13px 0;
+    color: #212121;
+    font-size: 25px;
+    border-radius: 100px;
+}
+
+.sosmedlist li a:hover i {
+    background: #474747;
+    color: #F8F8F8;
+}
+
+.sosmedlist li a {
+    text-decoration: none;
+    color: #F8F8F8;
+    font-weight: 600;
+}
+
+.sosmedlist li:first-child {
+    margin-left: 0;
+}
+
+.sosmedlist li:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 999px) {
+    .footquote h3 {
+        font-size: 40px;
+    }
+
+    .sosmedlist li a i {
+        width: 30px;
+        height: 30px;
+        padding: 8px 0;
+        font-size: 15px;
+    }
+
+    .sosmedlist li {
+        margin: 0 10px;
+    }
+
+    .sosmedlist li a {
+        font-size: 13px;
+    }
+}

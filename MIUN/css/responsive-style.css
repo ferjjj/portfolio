@@ -1,0 +1,750 @@
+/* ---------------------------------------------- /*
+* 15.MEDIA QUERY PAGE
+/* ---------------------------------------------- /*
+*/
+
+@media screen and (max-width: 2560px) {
+    .bg-fog-section {
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .bg-fog-section {
+        background-size: unset;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .kalpax-detail-wrapper {
+        padding-left: 5%;
+    }
+
+    .kalpax-project-wrapper {
+        padding-left: 5%;
+    }
+
+    .kalpax-project {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    #hero-block.kalpax-detail-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    #hero-block.kalpax-detail-wrapper>h1 {
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 50px;
+        margin-top: 15px;
+    }
+
+    #hero-block.kalpax-detail-wrapper>p {
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .kalpax-project-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-project-wrapper>h1 {
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 5rem;
+        margin-top: 15px;
+    }
+
+    .kalpax-projectpage-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        line-height: 1.7;
+    }
+
+    .kalpax-projectpage-wrapper>h1 {
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 5rem;
+        margin-top: 15px;
+    }
+
+    .kalpax-project-wrapper>h3 {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 2.5rem;
+    }
+
+    .kalpax-contact-wrapper {
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .kalpax-contact-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-contact-wrapper>h1 {
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 5rem;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .kalpax-contact-wrapper>h3 {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 2.5rem;
+    }
+
+    .about-image-wrap {
+        width: 350px;
+        height: 350px;
+        margin: 0 auto;
+    }
+
+    .about-image-wrap img {
+        width: 350px;
+        height: 350px;
+    }
+
+    blockquote {
+        text-align: center;
+    }
+
+    .test-info {
+        text-align: center;
+    }
+
+    .test-info img {
+        float: unset;
+        margin: 0 auto;
+        width: 30% !important;
+        padding-bottom: 20px;
+    }
+
+    .testi-title-wrap {
+        text-align: center;
+        margin-bottom: 100px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .testi-title-wrap>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .testi-title-wrap>h1 {
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 5rem;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .testi-title-wrap>h3 {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 2.5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .kalpax-exp-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-exp-wrapper>h1 {
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 5rem;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .kalpax-exp-wrapper>h3 {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 2.5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1366px) {
+    .word-mask {
+        font-size: 120px;
+    }
+}
+
+@media (max-width: 990px) {
+    .head-section {
+        background-position: center !important;
+    }
+
+    .detailfaq {
+        padding: 20px 30px 20px 80px;
+    }
+
+    .detailfaq h6 {
+        font-size: 20px;
+    }
+
+    .rg {
+        padding-top: 20px;
+        border-left: unset;
+    }
+
+    .lg::after {
+        content: " ";
+        position: absolute;
+        right: unset;
+    }
+
+    .mg-img-lb,
+    .mg-img-ls,
+    .mg-img-lm {
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .info-wd {
+        text-align: center;
+    }
+
+    .kalpax-detail-wrapper {
+        padding-top: 250px;
+        position: relative;
+        width: 80%;
+        z-index: 3;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .kalpax-projectpage-wrapper {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .kalpax-parralax {
+        display: none;
+    }
+
+    #kalpax-morefooter {
+        margin-top: 20px;
+    }
+
+    .align-items-center i {
+        font-size: 40px;
+    }
+
+    .block-6 {
+        padding-top: 30px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .media-body .kalpax-heading {
+        font-size: 20px;
+    }
+
+    .align-items-center::before {
+        top: 20px;
+    }
+
+    .logo-kalpax {
+        width: 150px;
+        margin-left: 20px;
+        padding-left: 0;
+    }
+
+    .logo-kalpax img {
+        filter: invert(1);
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 0;
+    }
+
+    .kalpax-main .hero-img {
+        width: 50%;
+        z-index: 0;
+        padding-top: 50px;
+    }
+
+    .kalpax-about-wrapper {
+        text-align: center;
+        margin-top: 50px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .about-image-wrap {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .about-image-wrap img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about-image-wrap img {
+        -webkit-mask-size: 300px;
+        mask-size: 300px;
+    }
+
+    .kalpax-projectdetail-wrapper {
+        padding-left: 0;
+    }
+
+    .lang {
+        position: absolute;
+        right: 80px;
+        height: 25px;
+        bottom: 0;
+    }
+
+    .lang ul li {
+        display: inline-block;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+
+    .masktext {
+        font-size: 80px;
+    }
+
+    .imgclient {
+        -webkit-box-flex: 0;
+        max-width: 33.33%;
+        -ms-flex: 0 0 33.33%;
+        flex: 0 0 33.33%;
+    }
+
+    .imgclient a img {
+        max-width: 33%;
+    }
+
+    .project-item {
+        width: 50%;
+    }
+
+    .kalpax-projectpage-wrapper>h3.title-h3 {
+        margin-top: 10px;
+        font-size: 30px;
+        line-height: 2rem;
+    }
+
+    .kalpax-projectpage-wrapper>p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kalpax-main .hero-img {
+        width: 80%;
+    }
+
+    #hero-block.kalpax-detail-wrapper>h1 {
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 40px;
+        margin-top: 15px;
+    }
+
+    #hero-block.kalpax-detail-wrapper>p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 23px;
+    }
+
+    .v-left {
+        float: unset;
+    }
+
+    .v-right {
+        float: unset;
+    }
+
+    .kalpax-form-wrap {
+        margin-top: 100px;
+        padding-left: 0;
+    }
+
+    .logo-kalpax {
+        width: 100px;
+        margin-left: 10px;
+    }
+
+    .icon-scroll {
+        display: none;
+    }
+
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+
+    .project-item {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .menuContent ul li {
+        font-size: 20px;
+    }
+
+    .kalpax-detail-wrapper {
+        padding-top: 350px;
+        width: 90%;
+        padding-left: 5%;
+    }
+
+    #hero-block.kalpax-detail-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    #hero-block.kalpax-detail-wrapper>h1 {
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 40px;
+        margin-top: 15px;
+    }
+
+    #hero-block.kalpax-detail-wrapper>p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 23px;
+    }
+
+    .kalpax-project-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-project-wrapper>h1 {
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 4rem;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    .kalpax-project-wrapper>h3 {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 2rem;
+    }
+
+    .kalpax-projectpage-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-projectpage-wrapper>h1 {
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 4rem;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    .kalpax-service-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-service-wrapper>h1 {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 4rem;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    .kalpax-service-wrapper>h3 {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 2rem;
+    }
+
+    .kalpax-main .hero-img {
+        width: 100%;
+        z-index: 0;
+        padding-top: 50px;
+    }
+
+    .kalpax-contact-wrapper {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .kalpax-contact-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-contact-wrapper>h1 {
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 4rem;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .kalpax-contact-wrapper>h3 {
+        margin-top: 5px;
+        font-size: 15px;
+        line-height: 2rem;
+    }
+
+    .kalpax-about-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-about-wrapper>h1 {
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 4rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .kalpax-about-wrapper>h3 {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 2rem;
+    }
+
+    .about-wrap {
+        padding-top: 0;
+    }
+
+    .testi-title-wrap {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .testi-title-wrap>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .testi-title-wrap>h1 {
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 4rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .testi-title-wrap>h3 {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 2rem;
+    }
+
+    .kalpax-exp-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-exp-wrapper>h1 {
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 4rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .kalpax-exp-wrapper>h3 {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 2rem;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    input,
+    textarea,
+    select {
+        font-size: 13px;
+    }
+
+    #hero-block.kalpax-detail-wrapper>h5 {
+        font-size: 13px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-project-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-project-wrapper>h1 {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 20px;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    .kalpax-project-wrapper>h3 {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 1.8rem;
+    }
+
+    .kalpax-projectpage-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-projectpage-wrapper>h1 {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 4rem;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    .kalpax-detailporto>h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .kalpax-detailporto>a {
+        font-size: 15px;
+        line-height: 2.3rem;
+    }
+
+    .kalpax-about-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .kalpax-about-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-about-wrapper>h1 {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 4rem;
+    }
+
+    .kalpax-about-wrapper>h3 {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 1.8rem;
+    }
+
+    .kalpax-exp-wrapper>h5 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .kalpax-exp-wrapper>h1 {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 4rem;
+    }
+
+    .kalpax-exp-wrapper>h3 {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 1.8rem;
+    }
+
+    .masktext {
+        font-size: 50px;
+    }
+
+    blockquote {
+        padding: 0.5em 0em 0.5em 0em;
+        border-left: unset !important;
+    }
+
+    blockquote:before {
+        font-size: 10em;
+        line-height: 80px;
+        position: relative;
+        top: 50px;
+    }
+
+    .imgclient {
+        -webkit-box-flex: 0;
+        max-width: 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+
+    .imgclient a img {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .kalpax-detailporto>h3 {
+        font-size: 15px;
+        line-height: 2rem;
+    }
+
+    .kalpax-detailporto>h2 {
+        font-size: 12px;
+        line-height: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .masktext {
+        font-size: 30px;
+    }
+
+    #kalpax-contactfooter p.addr {
+        font-size: 15px;
+        width: 100%;
+        line-height: 2.5rem;
+    }
+
+    .footer-links li a {
+        font-size: 15px;
+    }
+
+    .kalpax-morefooter h6 {
+        font-size: 16px;
+    }
+}
