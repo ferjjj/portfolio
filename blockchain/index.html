@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Voting DApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loader" class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Blockchain Voting Logo">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li> <!-- New Dashboard link -->
+                <li><a href="contact.html" class="contact-button">Contact</a></li>
+            </ul>
+            <button id="connectWallet" class="connect-btn">Connect MetaMask</button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h3>Positions</h3>
+            <ul id="sidebar-nav">
+                <li><a href="#" id="president" onclick="onTabClick('president')">President</a></li>
+                <li><a href="#" id="vicePresident" onclick="onTabClick('vicePresident')">Vice President</a></li>
+                <li><a href="#" id="senator" onclick="onTabClick('senator')">Senator</a></li>
+                <li><a href="#" id="governor" onclick="onTabClick('governor')">Governor</a></li>
+                <li><a href="#" id="mayor" onclick="onTabClick('mayor')">Mayor</a></li>
+            </ul>
+            <!-- <div class="reward-section">
+                <h3>Claim rewards</h3>
+                <div id="reward-claims">
+                    <button id="rewardClaim" class="btn-reward" onclick="claimReward()">Not eligible of any rewards</button>
+                </div>
+              </div> -->
+        </aside>
+
+        <section class="content">
+            <div class="candidate-container" id="candidateList">
+            </div>
+        </section>
+
+        <aside class="info-panel">
+            <h3>Election Info</h3>
+            <div class="info-content">
+                <h4>Current Stats</h4>
+                <p>Total Votes: <span id="totalVotes">0</span></p>
+            </div>
+        </aside>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.6.0/ethers.umd.min.js"></script>
+    <script src="wallet.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  /* Full-screen overlay */
+  .loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000; /* Ensure it's above everything */
+    display: none; /* Initially hidden */
+  }
+  
+  /* Loader animation (Spinner) */
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #fff4ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== NAVBAR STYLING ===== */
+.navbar {
+    background-color: #222;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1100px;
+    height: 80px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* ===== LOGO STYLING ===== */
+.logo img {
+    height: 40px;
+    display: block;
+}
+
+/* ===== NAVIGATION LINKS ===== */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00aaff;
+}
+
+/* ===== CONNECT METAMASK BUTTON ===== */
+.connect-btn {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.connect-btn:hover {
+    background-color: #0088cc;
+}
+
+/* ===== SIDEBAR STYLING ===== */
+.sidebar {
+    background-color: #222;
+    width: 250px;
+    position: fixed;
+    left: 20px;
+    top: 90px;
+    height: calc(100vh - 100px);
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.sidebar h2
+ {
+    color: white;
+    margin-bottom: 35px;
+}
+
+.sidebar h3 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* ===== SIDEBAR LINKS ===== */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #333;
+}
+
+/* ===== MAIN CONTENT STYLING ===== */
+.main-content {
+    width: calc(100% - 540px);
+    margin-left: 270px;
+    margin-right: 270px;
+    padding-top: 100px;
+}
+
+/* ===== CANDIDATE CONTAINER (HORIZONTAL LAYOUT) ===== */
+/* ===== CANDIDATES CONTAINER (CENTERED & RESPONSIVE GRID) ===== */
+.candidate-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align to the left by default */
+    padding-left: 50px; /* Moves the cards to the right */
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    padding-top: 130px;
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+    margin-left: 50px;
+}
+
+
+/* ===== CANDIDATE CARDS (UNIFORM SIZE & ALIGNMENT) ===== */
+.candidate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(145deg, #f0f4f8, #e6eef6);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 40, 85, 0.15),
+                0 2px 8px rgba(0, 40, 85, 0.1),
+                inset 0 1px 1px rgba(255, 255, 255, 0.8);
+    width: 335px;
+    min-height: 340px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 62, 155, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.candidate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 40, 85, 0.25),
+                0 4px 10px rgba(0, 40, 85, 0.15);
+}
+
+/* Government seal watermark */
+.candidate-card:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    height: 280px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='none' stroke='rgba(0,62,155,0.05)' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='35' fill='none' stroke='rgba(0,62,155,0.05)' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Candidate Image with governmental styling */
+.candidate-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid rgb(0, 62, 155);
+    display: block;
+    margin: 0 auto 16px;
+    box-shadow: 0 4px 12px rgba(0, 40, 85, 0.2);
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 4px;
+}
+
+/* Candidate Info with futuristic government styling */
+.candidate-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 14px 10px;
+    box-shadow: 0 1px 5px rgba(0, 40, 85, 0.1);
+}
+
+/* Text Info with modern governmental typeface styling */
+.text-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0, 39, 104);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.text-info .details {
+    font-size: 14px;
+    color: #2c3e50;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: 400;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+/* Vote Button with official government styling */
+.vote-btn {
+    background: linear-gradient(to right, rgb(0, 62, 155), rgb(0, 92, 185));
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 250px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 40, 85, 0.25);
+}
+
+.vote-btn:hover {
+    background: #00aaff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 40, 85, 0.3);
+}
+
+.vote-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(0, 40, 85, 0.2);
+}
+
+/* Glow effect on hover */
+.vote-btn:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(0, 62, 155, 0.3);
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.vote-btn:hover:after {
+    opacity: 1;
+}
+
+/* Official Marker */
+.candidate-card:after {
+    content: "OFFICIAL BALLOT";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 8px;
+    color: rgba(0, 62, 155, 0.7);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transform: rotate(45deg);
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .candidate-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .candidate-card {
+        width: 90%;
+        min-height: auto;
+    }
+
+    .candidate-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .text-info h3 {
+        font-size: 16px;
+    }
+
+    .text-info .details {
+        font-size: 13px;
+    }
+
+    .vote-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+/* Hide Position Title */
+#positionTitle {
+    display: none;
+}
+
+/* ===== RIGHT SIDEBAR (INFO PANEL) STYLING ===== */
+.info-panel {
+    background-color: #222;
+    width: 250px;
+    position: fixed;
+    right: 20px;
+    top: 90px;
+    height: calc(100vh - 100px);
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: white;
+}
+
+.info-panel h3 {
+    font-size: 25px;
+    margin-bottom: 35px;
+}
+
+.info-panel h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #00aaff;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-content p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.election-timer {
+    margin-top: 20px;
+}
+
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: #00aaff;
+}
+
+/* ===== VOTED CANDIDATES LIST STYLING ===== */
+.voted-candidates {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.voted-list {
+    list-style: none;
+    padding: 0;
+}
+
+.voted-item {
+    background-color: #333;
+    padding: 3px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.voted-position {
+    font-weight: bold;
+    color: #00aaff;
+    font-size: 14px;
+}
+
+.voted-name {
+    font-size: 16px;
+}
+.btn-reward {
+    background-color: #00aaff;  /* Same blue color */
+    color: white; 
+    border: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-reward:hover {
+    background-color: #0088cc;  /* Slightly darker blue */
+    transform: scale(1.05);
+  }
+
+  .btn-reward:active {
+    transform: scale(0.98);
+  }
+  .reward-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+  }
+  
+  .reward-section h3 {
+    color: #0d6efd;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  
+  .reward-claim {
+    background-color: #2a2a2a;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #00aaff;
+  }
+  
+  .reward-claim p {
+    margin: 5px 0;
+    color: #fff;
+  }
+
+  /* Default tab styles */
+#sidebar-nav li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background 0.3s;
+}
+
+/* Active tab styling */
+#sidebar-nav li a.active {
+    background-color: #3498db; /* Blue */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:disabled {
+    background-color: #ccc; /* Light gray background */
+    color: #666; /* Dark gray text */
+    cursor: not-allowed; /* Show not-allowed cursor */
+    opacity: 0.6; /* Reduce opacity */
+    border: 1px solid #999; /* Light gray border */
+}

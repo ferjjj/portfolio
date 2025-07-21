@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Blockchain Voting DApp</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Add ethers.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.6.0/ethers.umd.min.js"></script>
+</head>
+<body>
+    <div id="loader" class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Blockchain Voting Logo">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="connectWallet" class="connect-btn">Connect MetaMask</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h2>Admin Dashboard</h2>
+        <div class="dashboard-stats">
+            <h3>Election Stats</h3>
+            <p>Total Votes: <span id="totalVotes">0</span></p>
+            <p>Registered Voters: <span id="registeredVoters">0</span></p>
+            <!-- <p>Ongoing Elections: <span id="ongoingElections">0</span></p> -->
+        </div>
+
+        <div class="election-tally">
+            <h3>Votes tally</h3>
+            <div id="tabbed-results">
+                <div class="tabs">
+                    <!-- Tabs will be dynamically added here -->
+                </div>
+                <div class="tcontent">
+                    <!-- Candidate lists will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="manage-elections">
+            <h3>Manage Elections</h3>
+            <button id="openElectionBtn">Re-open Election</button>
+            <button id="endElectionBtn">Close Ongoing Election</button>
+        </div>
+
+        <div class="manage-candidates">
+            <h3>Add New Candidate</h3>
+            <form id="addCandidateForm">
+                <label for="candidateName">Candidate Name:</label>
+                <input type="text" id="candidateName" name="candidateName" required>
+                
+                <label for="candidatePosition">Position:</label>
+                <select id="candidatePosition" name="candidatePosition" required>
+                    <option value="president">President</option>
+                    <option value="vicePresident">Vice President</option>
+                    <option value="senator">Senator</option>
+                    <option value="governor">Governor</option>
+                    <option value="mayor">Mayor</option>
+                </select>
+
+                <label for="candidateDOB">Date of Birth:</label>
+                <input type="date" id="candidateDOB" name="candidateDOB" required>
+
+                <label for="candidateAge">Age:</label>
+                <input type="number" id="candidateAge" name="candidateAge" required>
+
+                <label for="candidateAchievements">Achievements:</label>
+                <input type="text" id="candidateAchievements" name="candidateAchievements" required>
+
+                <label for="candidateGender">Gender:</label>
+                <select id="candidateGender" name="candidateGender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <button type="submit" id="addCandidateBtn">Add Candidate</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Import dashboard.js as a module -->
+    <script src="wallet.js"></script>
+    <script src="dashboard.js" type="text/javascript"></script>
+</body>
+</html>
